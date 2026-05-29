@@ -1,0 +1,65 @@
+span.javascriptCode {
+    background-color: var(--card-bg-clr);
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 1rem;
+    color: var(--yellow-clr-accent);
+    font-style: normal;
+}
+
+span.cascadeCode {
+    background-color: var(--card-bg-clr);
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 1rem;
+    color: var(--blue-clr-accent);
+    font-style: normal;
+}
+
+span.commentCode {
+    background-color: var(--card-bg-clr);
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 1rem;
+    color: var(--green-clr-accent);
+    font-style: normal;
+}
+
+span.codeCSS {
+    background-color: var(--card-bg-clr);
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 1rem;
+    color: var(--blue-clr-accent);
+    font-style: italic;
+}
+
+span.userAccentCode {
+    background-color: var(--card-bg-clr);
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 1rem;
+    color: var(--user-clr-accent);
+    font-style: normal;
+}
+
+span.numberCode {
+    background-color: var(--card-bg-clr);
+    color: var(--orange-clr-accent);
+    font-style: normal;
+}
+
+span.degreeCSSCode {
+    background-color: var(--card-bg-clr);
+    color: var(--purple-clr-accent);
+    font-style: normal;
+}
+
+span.pr {
+    font-style: normal;
+    color: var(--orange-clr-accent);
+}
+
+span.pr.tokyoNightTheme {
+    color: var(--lightblue-clr-accent);
+}

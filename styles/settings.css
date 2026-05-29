@@ -1,0 +1,265 @@
+aside#settings {
+    position: fixed;
+    background-color: var(--card-bg-clr);
+    z-index: 1002;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: min(85%, 315px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-left: .15rem var(--border-clr) solid;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transform: translateX(100%);
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: transform .5s ease, color .2s ease, background-color .2s ease;
+}
+
+aside#settings.active { transform: translateX(0); }
+
+section#config {
+    position: relative;
+    top: 0;
+    flex-shrink: 0;
+    margin-left: .5rem;
+    margin-top: 1rem;
+    width: 95%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: var(--sub-txt-clr);
+    gap: .5rem;
+}
+
+span#stc {
+    font-size: min(1.2rem, 5vw);
+    color: var(--sub-txt-clr);
+    padding-right: .5rem;
+    padding-bottom: .5rem;
+    transition: color .2s ease;
+}
+
+span#stc:hover {
+    color: var(--user-clr-accent);
+}
+
+span#exit {
+    position: absolute;
+    color: var(--muted-txt-clr);
+    font-size: min(1.25rem, 5.25vw);
+    padding-left: .5rem;
+    padding-right: .5rem;
+    left: 0;
+    transition: color .2s ease;
+}
+
+span#th, span#ac, span#diceSkins { transition: color .2s ease; }
+span#exit:hover { cursor: pointer; color: var(--main-txt-clr); }
+span#th:hover, span#ac:hover, span#diceSkins:hover { cursor: pointer; color: var(--user-clr-accent); }
+
+span#th::after {
+    position: relative;
+    content: " \f03d8";
+    opacity: 0;
+    font-size: 0rem;
+    transition: opacity .2s ease, font-size .2s ease;
+}
+
+span#th::before {
+    position: absolute;
+    content: "\e602";
+    left: 0;
+    transform: translateX(.75rem);
+    transition: transform .2s ease;
+}
+
+span#th.show::before {
+    transform: translateX(.75rem) rotateZ(90deg);
+}
+
+span#th.show::after {
+    opacity: 1;
+    font-size: min(1.2rem, 5vw);
+}
+
+span#ac::after {
+    position: relative;
+    content: " \f1fc";
+    opacity: 0;
+    font-size: 0rem;
+    transition: opacity .2s ease, font-size .2s ease;
+}
+
+span#ac::before {
+    position: absolute;
+    content: "\e602";
+    left: 0;
+    transform: translateX(.75rem);
+    transition: transform .2s ease;
+}
+
+span#ac.show::before {
+    transform: translateX(.75rem) rotateZ(90deg);
+}
+
+span#ac.show::after {
+    opacity: 1;
+    font-size: min(1.2rem, 5vw);
+}
+
+span#diceSkins::after {
+    position: relative;
+    content: " \eef6";
+    opacity: 0;
+    font-size: 0rem;
+    transition: opacity .2s ease, font-size .2s ease;
+}
+
+span#diceSkins::before {
+    position: absolute;
+    content: "\e602";
+    left: 0;
+    transform: translateX(.75rem);
+    transition: transform .2s ease;
+}
+
+span#diceSkins.show::before {
+    transform: translateX(.75rem) rotateZ(90deg);
+}
+
+span#diceSkins.show::after {
+    opacity: 1;
+    font-size: min(1.2rem, 5vw);
+}
+
+div#dstc {
+    width: 100%;
+    display: flex;
+    padding-right: 1rem;
+    flex-direction: column;
+    align-items: flex-end;
+    border-bottom: .15rem var(--border-clr) solid;
+}
+
+div#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .25);
+    display: none;
+    z-index: 1001;
+}
+
+ul#c {
+    position: relative;
+    font-size: min(1.2rem, 5vw);
+    text-align: right;
+    list-style-type: none;
+    flex-grow: 1;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+button.saveChanges {
+    background-color: var(--green-clr-accent);
+    color: var(--main-bg-clr);
+    border-radius: .5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    border: .2rem solid transparent;
+    transition: border-color .2s ease;
+    &:hover { border-color: var(--main-txt-clr); }
+}
+
+button.resetChanges {
+    background-color:  var(--red-clr-accent);
+    color: var(--main-bg-clr);
+    border-radius: .5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    border: .2rem solid transparent;
+    transition: border-color .2s ease;
+    &:hover { border-color: var(--main-txt-clr); }
+}
+
+li.lic {
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+div.dropdown-content {
+    display: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: min(1rem, 4vw);
+}
+
+div.dropdown-content#dth.show {
+    display: flex;
+}
+
+div.dropdown-content#dac.show {
+    display: flex;
+}
+
+div.dropdown-content#ddiceSkins.show {
+    display: flex;
+}
+
+.custom-radio-container input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.radio-checkmark {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--border-clr);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: width .2s ease, height .2s ease, border-color .2s ease;
+}
+
+.custom-radio-container input:checked ~ .radio-checkmark {
+    border-color: var(--user-clr-accent);
+    width: 18px;
+    height: 18px;
+}
+
+.radio-checkmark::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: var(--user-clr-accent);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.custom-radio-container input:checked ~ .radio-checkmark::after {
+    transform: scale(1);
+}

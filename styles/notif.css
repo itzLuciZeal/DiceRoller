@@ -1,0 +1,34 @@
+div#notification {
+    position: absolute;
+    top: 0;
+    padding: .5rem;
+    opacity: 0;
+    transform: translateY(-7rem);
+    transition: transform .3s ease, opacity .3s ease;
+}
+
+div#notification::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: .35rem;
+    border-bottom: .15rem solid var(--main-txt-clr);
+    width: 100%;
+    height: 100%;
+}
+
+span#notifTxt {
+    font-size: clamp(.8rem, 1.5vw + .5rem, 1.2rem); 
+    color: var(--main-txt-clr); 
+    background-color: var(--main-bg-clr);
+}
+
+span#numberOneCode { color: var(--blue-clr-accent); }
+span#numberTwoCode { color: var(--orange-clr-accent); }
+span#numberThreeCode { color: var(--green-clr-accent); }
+span#numberFourCode { color: var(--pink-clr-accent); }
+span#numberFiveCode { color: var(--red-clr-accent); }
+span#numberSixCode { color: var(--yellow-clr-accent); }

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/icon/diceroller-icon.png">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/settings.css">
+    <link rel="stylesheet" href="styles/codeStyles.css">
+    <link rel="stylesheet" href="styles/notif.css">
+    <title>Dice Rolling</title>
+</head>
+<body>
+    <aside id="settings">
+        <section id="config">
+            <span id="exit">&#xf52f;</span>
+            <div id="dstc">
+                <span id="stc">Settings &#xf013;</span>
+            </div>
+            <ul id="c">
+                <li class="lic" id="themes">
+                    <span id="th">Themes</span>
+                    <div class="dropdown-content" id="dth">
+                        <label class="custom-radio-container">
+                            <span id="mocha">Mocha</span> 
+                            <input type="radio" name="theme" value="mocha">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="custom-radio-container">
+                            <span id="macchiato">Macchiato</span>
+                            <input type="radio" name="theme" value="macchiato">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="custom-radio-container">
+                            <span id="frappe">Frappe</span>
+                            <input type="radio" name="theme" value="frappe">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="custom-radio-container">
+                            <span id="tokyonight">Tokyonight</span> 
+                            <input type="radio" name="theme" value="tokyonight">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <div>
+                            <button class="saveChanges" id="save-bth">
+                                <span><strong>Save Changes</strong> &#xf0193;</span>
+                            </button>
+                            <button class="resetChanges" id="reset-bth">
+                                <span><strong>Reset</strong> &#xf0453;</span>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li class="lic">
+                    <span id="ac">Accents</span>
+                    <div class="dropdown-content" id="dac">
+                        <label class="custom-radio-container">
+                            <span id="pastel-purple">Pastel Purple</span> 
+                            <input type="radio" name="accent" value="purple">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="custom-radio-container">
+                            <span id="pastel-lightblue">Pastel Light Blue</span>
+                            <input type="radio" name="accent" value="lightblue">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="custom-radio-container">
+                            <span id="pastel-navyblue">Pastel Navy Blue</span>
+                            <input type="radio" name="accent" value="navyblue">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="custom-radio-container">
+                            <span id="pastel-orange">Pastel Orange</span>
+                            <input type="radio" name="accent" value="orange">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="custom-radio-container">
+                            <span id="pastel-green">Pastel Green</span>
+                            <input type="radio" name="accent" value="green">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="custom-radio-container">
+                            <span id="pastel-pink">Pastel Pink</span>
+                            <input type="radio" name="accent" value="pink">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="custom-radio-container">
+                            <span id="pastel-red">Pastel Red</span>
+                            <input type="radio" name="accent" value="red">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="custom-radio-container">
+                            <span id="pastel-yellow">Pastel Yellow</span>
+                            <input type="radio" name="accent" value="yellow">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <div>
+                            <button class="saveChanges" id="save-bac">
+                                <span><strong>Save Changes</strong> &#xf0193;</span>
+                            </button>
+                            <button class="resetChanges" id="reset-bac">
+                                <span><strong>Reset</strong> &#xf0453;</span>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li class="lic">
+                    <span id="diceSkins">Dice Skins</span>
+                    <div class="dropdown-content" id="ddiceSkins">
+                        <label class="custom-radio-container">
+                            <span id="monotonic-diceskin">Monotonic</span>
+                            <input type="radio" name="diceSkin" value="monotonic">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="custom-radio-container">
+                            <span id="real-dice-diceskin">Real Dice</span>
+                            <input type="radio" name="diceSkin" value="realdice">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="custom-radio-container">
+                            <span id="dr-stone-diceskin">Dr. Stone</span>
+                            <input type="radio" name="diceSkin" value="drStone">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="custom-radio-container">
+                            <span id="danganronpav1-diceskin">Danganronpa V1</span>
+                            <input type="radio" name="diceSkin" value="danganronpaV1">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="custom-radio-container">
+                            <span id="danganronpav2-diceskin">Danganronpa V2</span>
+                            <input type="radio" name="diceSkin" value="danganronpaV2">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <label class="custom-radio-container">
+                            <span id="danganronpav3-diceskin">Danganronpa V3</span>
+                            <input type="radio" name="diceSkin" value="danganronpaV3">
+                            <span class="radio-checkmark"></span>
+                        </label>
+                        <div>
+                            <button class="saveChanges" id="save-bDice">
+                                <span><strong>Save Changes</strong> &#xf0193;</span>
+                            </button>
+                            <button class="resetChanges" id="reset-bDice">
+                                <span><strong>Reset</strong> &#xf0453;</span>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </aside>
+    <div id="overlay"></div>
+    <header>
+        <img src="assets/icon/diceroller-icon.png" id="iconDice">
+        <h1 id="titleProject">
+            <span>Dice Roller</span>
+        </h1>
+        <span id="st">&#xf013;</span>
+    </header>
+    <main>
+        <section id="intro">
+            <h1 id="welcome">Welcome To My New Random Project!</h1>
+            <p class="desc1" id="created"></p>
+            <p class="desc1" id="firstpg">This journey took me a whole probably around <strong>9 hours</strong> up to this point with just building the sketelon of this page. I have not yet been taking a break but this one is the best project I have done so far. I can lead you to my journey on what I went through if you have time to read it.</p>
+            <p class="desc1">You might think, what project did I do? Well, it's simple really, a <strong>dice rolling program</strong>. The story was, I was just following Bro Code's Full Course on <span class="javascriptCode">JavaScript &#xf031e;</span>. And when I was just doing well, following the basics and stuff, I got into the <strong>dice rolling program</strong> project part. Guess what, I did this website for fun and curiosity!</p>
+            <p class="desc1">What Bro Code did was a simple dice program that is 2D pictures and stuff where we learn applications of the <strong>spread operator</strong> and the <strong>rest operator</strong>. I was like, <span class="commentCode">"This is going to be a breezed for me, what if I just did 3D dice cube instead?"</span> then it hit me. It's difficult, but that's the thing, it was fun for me.</p>
+            <img class="desc1" id="dicePictureP1" src="assets/imgs/diceRoller-P1.jpg">
+            <p class="desc1">I was experimenting, tried using Gemini AI to help me with this one but yeah I just folded it on my own. Here you can see at the image at the top, I tried disassembling it and tried to get out of it.</p>
+            <img class="desc1" id="dicePictureP1" src="assets/imgs/diceRoller-P2.jpg">
+            <p class="desc1">Here you can see that I am getting pretty much out of it. This is where the <span class="codeCSS">transform</span> of <span class="cascadeCode">CSS &#xe6b8;</span> comes into play. What I did was tried to juggle it out, looking <strong>3D</strong> always to check if I did it right.</p>
+            <img class="desc1" id="dicePictureP1" src="assets/imgs/diceRoller-P3.jpg">
+            <p class="desc1">You can really see here that I keep looking whether I got it right or not, and made each faces to have colors on them so I can distinguished it. I did <span class="codeCSS">rotateX<span class="pr">(<span id="str">'angle'</span>)</span></span> and this one which controls the x-axis basically the horizontal part and <span class="codeCSS">rotateY<span class="pr">(<span id="str">'angle'</span>)</span></span> that controls the y-axis part which in sideways, vertically yes, and lastly the <span class="codeCSS">rotateZ<span class="pr">(<span id="str">'angle'</span>)</span></span> controlling part of z-axis that moves clockwise or counterclockwise, they are essential so I can make it like a cube.</p>
+            <video class="desc1" id="diceVideoD1" src="assets/videos/diceRoller-1.mp4" autoplay muted loop playinline>
+                Your browser does not support the video tag.
+            </video>
+            <p class="desc1" id="diceVideoLabelD1"></p>
+            <p class="desc1" id="secpg">Here, I demonstrated the usage of <strong>CSS Properties</strong>, like the <span class="codeCSS">rotateX<span class="pr">(<span class="numberCode">90</span><span class="degreeCSSCode">deg</span>)</span></span> part of stuff in the transform style property. The process was frustrating in the part of doing the faces of the cube, since I am learning the 3D space of this one.</p>
+            <p class="desc1">Another feature I added is that you can change the surface of the cube whether in anime or not, you can visit it in the <span class="codeCSS" id="str">settings &#xf013;</span> page!</p>
+            <p class="desc1">One thing to notice is that the theme has changed! Which is great to be honest. You can also customize your theme inside the <span class="codeCSS" id="str">settings &#xf013;</span> which is at the <strong>header</strong> of this page. Additionally, you can also edit your <span class="userAccentCode">accent color</span> there.</p>
+            <p class="desc1" id="lastpg">With that out of the way, you can go ahead and try the dice rollers I created! Enjoy!</p>
+        </section>
+        <section id="base">
+            <div id="notification"></div>
+            <div id="glowCube"></div>
+            <div class="cube">
+                <div class="face front" id="numberOne"></div>
+                <div class="face back" id="numberSix"></div>
+                <div class="face right" id="numberTwo"></div>
+                <div class="face left" id="numberFive"></div>
+                <div class="face top" id="numberThree"></div>
+                <div class="face bottom" id="numberFour"></div>
+            </div>
+        </section>
+        <section id="controls">
+            <label id="hint" class="normal">Roll The <strong>Dice</strong> To Start!</label>
+            <button id="rollDice"><strong>Roll Dice</strong></button>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <span>
+                &#xf1f9; 2026 Dice Roller | Made by itzLuciZeal
+            </span>
+            <div>
+                <a href="https://github.com/itzLuciZeal" id="gh">
+                    <span>&#xf09b;</span>
+                </a>
+                <a href="https://www.facebook.com/moncarlo.mixZ" id="fb">
+                    <span>&#xf020c;</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="functions/script.js"></script>
+    <script src="functions/settings.js"></script>
+    <script src="functions/config.js"></script>
+    <script src="functions/accent.js"></script>
+</body>
+</html>
