@@ -2,12 +2,12 @@ const availableDiceSkins = {
     monotonic: {
         baseName: "Monotonic",
         labelSpanID: "monotonic-diceskin",
-        numberOne: { skinpath: "../assets/dice-skins/monotonic/dice-no1.png" },
-        numberTwo: { skinpath: "../assets/dice-skins/monotonic/dice-no2.png" },
-        numberThree: { skinpath: "../assets/dice-skins/monotonic/dice-no3.png" },
-        numberFour: { skinpath: "../assets/dice-skins/monotonic/dice-no4.png" },
-        numberFive: { skinpath: "../assets/dice-skins/monotonic/dice-no5.png" },
-        numberSix: { skinpath: "../assets/dice-skins/monotonic/dice-no6.png" },
+        numberOne: { skinpath: "/DiceRoller/assets/dice-skins/monotonic/dice-no1.png" },
+        numberTwo: { skinpath: "/DiceRoller/assets/dice-skins/monotonic/dice-no2.png" },
+        numberThree: { skinpath: "/DiceRoller/assets/dice-skins/monotonic/dice-no3.png" },
+        numberFour: { skinpath: "/DiceRoller/assets/dice-skins/monotonic/dice-no4.png" },
+        numberFive: { skinpath: "/DiceRoller/assets/dice-skins/monotonic/dice-no5.png" },
+        numberSix: { skinpath: "/DiceRoller/assets/dice-skins/monotonic/dice-no6.png" },
         rollContent: {
             1: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberOneCode'>Number One</span>",
             2: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberTwoCode'>Number Two</span>",
