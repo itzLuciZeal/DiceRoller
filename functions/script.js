@@ -1,13 +1,16 @@
+const isGitHubPages = window.location.hostname.includes("github.io");
+const basePath = isGitHubPages ? "/DiceRoller" : "";
+
 const availableDiceSkins = {
     monotonic: {
         baseName: "Monotonic",
         labelSpanID: "monotonic-diceskin",
-        numberOne: { skinpath: "/DiceRoller/assets/dice-skins/monotonic/dice-no1.png" },
-        numberTwo: { skinpath: "/DiceRoller/assets/dice-skins/monotonic/dice-no2.png" },
-        numberThree: { skinpath: "/DiceRoller/assets/dice-skins/monotonic/dice-no3.png" },
-        numberFour: { skinpath: "/DiceRoller/assets/dice-skins/monotonic/dice-no4.png" },
-        numberFive: { skinpath: "/DiceRoller/assets/dice-skins/monotonic/dice-no5.png" },
-        numberSix: { skinpath: "/DiceRoller/assets/dice-skins/monotonic/dice-no6.png" },
+        numberOne: { skinpath: `${basePath}/assets/dice-skins/monotonic/dice-no1.png` },
+        numberTwo: { skinpath: `${basePath}/assets/dice-skins/monotonic/dice-no2.png` },
+        numberThree: { skinpath: `${basePath}/assets/dice-skins/monotonic/dice-no3.png` },
+        numberFour: { skinpath: `${basePath}/assets/dice-skins/monotonic/dice-no4.png` },
+        numberFive: { skinpath: `${basePath}/assets/dice-skins/monotonic/dice-no5.png` },
+        numberSix: { skinpath: `${basePath}/assets/dice-skins/monotonic/dice-no6.png` },
         rollContent: {
             1: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberOneCode'>Number One</span>",
             2: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberTwoCode'>Number Two</span>",
@@ -20,52 +23,92 @@ const availableDiceSkins = {
     realdice: {
         baseName: "Real Dice",
         labelSpanID: "real-dice-diceskin",
-        1: "One Dot",
-        2: "Two Dots",
-        3: "Three Dots",
-        4: "Four Dots",
-        5: "Five Dots",
-        6: "Six Dots",
+        numberOne: { skinpath: `${basePath}/assets/dice-skins/realdice/realdice-no1.png` },
+        numberTwo: { skinpath: `${basePath}/assets/dice-skins/realdice/realdice-no2.png` },
+        numberThree: { skinpath: `${basePath}/assets/dice-skins/realdice/realdice-no3.png` },
+        numberFour: { skinpath: `${basePath}/assets/dice-skins/realdice/realdice-no4.png` },
+        numberFive: { skinpath: `${basePath}/assets/dice-skins/realdice/realdice-no5.png` },
+        numberSix: { skinpath: `${basePath}/assets/dice-skins/realdice/realdice-no6.png` },
+        rollContent: {
+            1: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberOneCode'>Number One</span>",
+            2: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberTwoCode'>Number Two</span>",
+            3: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberThreeCode'>Number Three</span>!",
+            4: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberFourCode'>Number Four</span>!",
+            5: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberFiveCode'>Number Five</span>!!",
+            6: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberSixCode'>Number Six</span>!!!"
+        }
     },
     drStone: {
         baseName: "Dr. Stone",
         labelSpanID: "dr-stone-diceskin",
-        1: "One Dot",
-        2: "Two Dots",
-        3: "Three Dots",
-        4: "Four Dots",
-        5: "Five Dots",
-        6: "Six Dots",
+        numberOne: { skinpath: `${basePath}/assets/dice-skins/drstone/xeno-wingfield.png` },
+        numberTwo: { skinpath: `${basePath}/assets/dice-skins/drstone/stanley-snyder.png` },
+        numberThree: { skinpath: `${basePath}/assets/dice-skins/drstone/gen-asagiri.png` },
+        numberFour: { skinpath: `${basePath}/assets/dice-skins/drstone/ryusui-nanami.png` },
+        numberFive: { skinpath: `${basePath}/assets/dice-skins/drstone/sai-nanami.png` },
+        numberSix: { skinpath: `${basePath}/assets/dice-skins/drstone/senku-ishigami.png` },
+        rollContent: {
+            1: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberOneCode'>Dr. Xeno</span>",
+            2: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberTwoCode'>Stanley Sniper</span>",
+            3: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberThreeCode'>Gen Mentalist</span>!",
+            4: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberFourCode'>Captain Ryusui</span>!",
+            5: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberFiveCode'>Math Prodigy Sai</span>!!",
+            6: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberSixCode'>Dr. Senku</span>!!!"
+        }
     },
     danganronpaV1: {
         baseName: "Danganronpa V1",
         labelSpanID: "danganronpav1-diceskin",
-        1: "One Dot",
-        2: "Two Dots",
-        3: "Three Dots",
-        4: "Four Dots",
-        5: "Five Dots",
-        6: "Six Dots",
+        numberOne: { skinpath: `${basePath}/assets/dice-skins/danganronpav1/celestia-ludenberg.png` },
+        numberTwo: { skinpath: `${basePath}/assets/dice-skins/danganronpav1/byakuya-togami.png` },
+        numberThree: { skinpath: `${basePath}/assets/dice-skins/danganronpav1/toko-fukawa.png` },
+        numberFour: { skinpath: `${basePath}/assets/dice-skins/danganronpav1/makoto-naegi.png` },
+        numberFive: { skinpath: `${basePath}/assets/dice-skins/danganronpav1/kyoko-kirigiri.png` },
+        numberSix: { skinpath: `${basePath}/assets/dice-skins/danganronpav1/junko-enoshima.png` },
+        rollContent: {
+            1: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberOneCode'>Celestia Ludenberg</span>",
+            2: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberTwoCode'>Byakuya Togami</span>",
+            3: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberThreeCode'>Toko Fukawa</span>!",
+            4: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberFourCode'>Makoto Naegi</span>!",
+            5: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberFiveCode'>Kyoko Kirigiri</span>!!",
+            6: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberSixCode'>Junko Enoshima</span>!!!"
+        }
     },
     danganronpaV2: {
         baseName: "Danganronpa V2",
         labelSpanID: "danganronpav2-diceskin",
-        1: "One Dot",
-        2: "Two Dots",
-        3: "Three Dots",
-        4: "Four Dots",
-        5: "Five Dots",
-        6: "Six Dots",
+        numberOne: { skinpath: `${basePath}/assets/dice-skins/danganronpav2/kazuichi-soda.png` },
+        numberTwo: { skinpath: `${basePath}/assets/dice-skins/danganronpav2/sonia-nevermind.png` },
+        numberThree: { skinpath: `${basePath}/assets/dice-skins/danganronpav2/mikan-tsumiki.png` },
+        numberFour: { skinpath: `${basePath}/assets/dice-skins/danganronpav2/chiaki-nanami.png` },
+        numberFive: { skinpath: `${basePath}/assets/dice-skins/danganronpav2/hajime-hinata.png` },
+        numberSix: { skinpath: `${basePath}/assets/dice-skins/danganronpav2/nagito-komaeda.png` },
+        rollContent: {
+            1: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberOneCode'>Kazuichi Soda</span>",
+            2: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberTwoCode'>Sonia! Nevermind...</span>",
+            3: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberThreeCode'>Mikan Tsumiki</span>!",
+            4: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberFourCode'>Chiaki Nanami</span>!",
+            5: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberFiveCode'>Hajime Hinata</span>!!",
+            6: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberSixCode'><b>Nagito Komaeda</b></span>!!!"
+        }
     },
     danganronpaV3: {
         baseName: "Danganronpa V3",
         labelSpanID: "danganronpav3-diceskin",
-        1: "One Dot",
-        2: "Two Dots",
-        3: "Three Dots",
-        4: "Four Dots",
-        5: "Five Dots",
-        6: "Six Dots",
+        numberOne: { skinpath: `${basePath}/assets/dice-skins/danganronpav3/kaede-akamatsu.png` },
+        numberTwo: { skinpath: `${basePath}/assets/dice-skins/danganronpav3/kaito-momota.png` },
+        numberThree: { skinpath: `${basePath}/assets/dice-skins/danganronpav3/maki-harukawa.png` },
+        numberFour: { skinpath: `${basePath}/assets/dice-skins/danganronpav3/miu-iruma.png` },
+        numberFive: { skinpath: `${basePath}/assets/dice-skins/danganronpav3/shuichi-saihara.png` },
+        numberSix: { skinpath: `${basePath}/assets/dice-skins/danganronpav3/kokichi-ouma.png` },
+        rollContent: {
+            1: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberOneCode'>Kaede Akamatsu</span>",
+            2: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberTwoCode'>Kaito Momota</span>",
+            3: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberThreeCode'>Maki Roll</span>!",
+            4: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberFourCode'>Miu Iruma</span>!",
+            5: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberFiveCode'>... Shuichi Saihara</span>!!",
+            6: "<span class='userAccentCode' id='notifTxt'>You Got <span id='numberSixCode'>... <b>Kokichi Ouma</b></span>!!!"
+        }
     }
 }
 
@@ -134,6 +177,25 @@ function getRotation(targetX, targetY, targetZ, targetNum) {
             rotateZ(${targetZ + extraSpins() * targetNum - isFour}deg)
             translateZ(1.1rem) scale3d(1.2, 1.2, 1.2)`;
 }
+
+saveDiceSkinBTN.addEventListener('click', () => {
+    notificationDiv.style.opacity = 0;
+    notificationDiv.style.transform = 'translateY(-7rem)';
+    const selectedDiceSkinRadio = document.querySelector('input[name="diceSkin"]:checked');
+    if (selectedDiceSkinRadio) {
+        currentDiceSkin = selectedDiceSkinRadio.value;
+        updateDiceSkinUI(currentDiceSkin);
+        applyDiceSkin(currentDiceSkin);
+    }
+});
+
+resetDiceSkinBTN.addEventListener('click', () => {
+    notificationDiv.style.opacity = 0;
+    notificationDiv.style.transform = 'translateY(-7rem)';
+    currentDiceSkin = defaultDiceSkin;
+    updateDiceSkinUI(currentDiceSkin);
+    applyDiceSkin(currentDiceSkin);
+});
 
 rollDiceBtn.addEventListener('click', () => {
     let rollNum = Math.floor(Math.random() * 6) + 1;

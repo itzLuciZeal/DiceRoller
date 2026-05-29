@@ -5,6 +5,18 @@ span.javascriptCode {
     border-radius: 1rem;
     color: var(--yellow-clr-accent);
     font-style: normal;
+    transition: color .2s ease;
+    &:hover { cursor: pointer; color: var(--user-clr-accent); }
+}
+
+span.facebookCode {
+    background-color: var(--card-bg-clr);
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 1rem;
+    color: var(--blue-clr-accent);
+    font-style: normal;
+    &:hover { cursor: pointer; color: var(--user-clr-accent); }
 }
 
 span.cascadeCode {
@@ -14,6 +26,7 @@ span.cascadeCode {
     border-radius: 1rem;
     color: var(--blue-clr-accent);
     font-style: normal;
+    &:hover { cursor: pointer; color: var(--user-clr-accent); }
 }
 
 span.commentCode {
@@ -23,6 +36,7 @@ span.commentCode {
     border-radius: 1rem;
     color: var(--green-clr-accent);
     font-style: normal;
+    &:hover { cursor: pointer; color: var(--user-clr-accent); }
 }
 
 span.codeCSS {
@@ -32,6 +46,7 @@ span.codeCSS {
     border-radius: 1rem;
     color: var(--blue-clr-accent);
     font-style: italic;
+    &:hover { cursor: pointer; color: var(--user-clr-accent); }
 }
 
 span.userAccentCode {
@@ -47,19 +62,23 @@ span.numberCode {
     background-color: var(--card-bg-clr);
     color: var(--orange-clr-accent);
     font-style: normal;
+    &:hover { cursor: pointer; color: var(--user-clr-accent); }
 }
 
 span.degreeCSSCode {
     background-color: var(--card-bg-clr);
     color: var(--purple-clr-accent);
     font-style: normal;
+    &:hover { cursor: pointer; color: var(--user-clr-accent); }
 }
 
 span.pr {
     font-style: normal;
     color: var(--orange-clr-accent);
+    &:hover { cursor: pointer; color: var(--user-clr-accent); }
 }
 
 span.pr.tokyoNightTheme {
     color: var(--lightblue-clr-accent);
+    &:hover { cursor: pointer; color: var(--user-clr-accent); }
 }

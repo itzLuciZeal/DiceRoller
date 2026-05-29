@@ -5,6 +5,11 @@
     font-style: normal;
 }
 
+* {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -227,6 +232,7 @@ section#intro {
 }
 
 p.desc1 {
+    cursor: default;
     margin-left: .5rem;
     margin-right: .5rem;
     padding-left: clamp(.5rem, 1vw + .5rem, 1.5rem);
@@ -286,13 +292,14 @@ p#created {
 
 p#created::before {
     position: absolute;
-    content: "| May 28, 2026 \f274";
+    content: "| May 27-29, 2026 \f274";
     padding-right: 1rem;
     color: var(--sub-txt-clr);
     background-color: var(--main-bg-clr);
 }
 
 h1#welcome {
+    cursor: default;
     text-align: center;
     margin-bottom: 0;
     margin-left: .5rem;
@@ -361,7 +368,7 @@ button#rollDice:hover {
 }
 
 .front /* 1 */ { transform: translateZ(2rem); background-position: center; background-repeat: no-repeat; background-size: cover; }
-.back /* 6 */ { transform: translateZ(-4.2rem) rotateY(180deg); background-position: center; background-repeat: no-repeat; background-size: cover; }
+.back /* 6 */ { transform: translateZ(-4.2rem) rotateY(180deg) rotateZ(180deg); background-position: center; background-repeat: no-repeat; background-size: cover; }
 .right /* 2 */ { transform: translateX(3.15rem) translateZ(-1.1rem) rotateY(90deg); background-position: center; background-repeat: no-repeat; background-size: cover; }
 .left /* 5 */ { transform: translateX(-3.15rem) translateZ(-1.1rem) rotateY(-90deg); background-position: center; background-repeat: no-repeat; background-size: cover; }
 .top /* 3 */ { transform: translateY(-3.15rem) translateZ(-1.1rem) rotateX(90deg); background-position: center; background-repeat: no-repeat; background-size: cover; }
